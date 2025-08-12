@@ -1,0 +1,360 @@
+/* * {
+  margin: 0;
+  padding: 0;
+
+box-sizing: border-box;
+}
+body{
+  font-family: "Roboto", sans-serif;
+  background: #f0f2f5;
+  color: #333;
+}
+.join-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #e0eafc, #cfdef3);
+
+  .join-form {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+
+    h1{
+      margin-bottom: 1.5rem;
+      font-size: 1.5rem;
+      color: #333;
+    }
+    input{
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+    button{
+      width: 100%;
+      padding: 0.75rem;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: #0056b3;
+      }
+    }
+  }
+}
+.editor-container {
+  display: flex;
+  height: 100vh;
+  background-color: #1e1e1e;
+}
+
+.sidebar {
+  width: 250px;
+  background: #fff;
+  border-right: 1px solid #ddd;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar .room-info {
+  margin-bottom: 1rem;
+}
+
+.sidebar .room-info h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  color: #333;
+}
+
+.sidebar .room-info .copy-button {
+  background-color: #4cafef;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.15s ease;
+}
+
+.sidebar .room-info .copy-button:hover {
+  background-color: #1e90ff;
+  transform: translateY(-2px);
+}
+
+.sidebar .room-info .copy-button:active {
+  transform: translateY(0);
+}
+
+.sidebar .room-info .copy-button.copied {
+  background-color: #28a745;
+}
+
+.sidebar h3 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  color: #444;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  padding: 0.5rem 0;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.sidebar ul li:hover {
+  background-color: #f0f2f5;
+}
+
+.sidebar .typing-indicator {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: auto;
+  margin-bottom: 1rem;
+}
+
+.sidebar .language-selector {
+  width: 100%;
+  padding: 0.4rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.sidebar .leave-button {
+  background-color: #ff4d4f;
+  color: white;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.sidebar .leave-button:hover {
+  background-color: #e04344;
+}
+
+.editor-wrapper {
+  flex: 1;
+}
+
+.copy-button {
+  background-color: #4cafef;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.15s ease;
+}
+
+.copy-button:hover {
+  background-color: #1e90ff;
+  transform: translateY(-2px);
+}
+
+.copy-button:active {
+  transform: translateY(0);
+}
+
+.copy-button.copied {
+  background-color: #28a745;
+} */
+
+/* Join Room Page */
+.join-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #1e1e1e;
+}
+
+.join-form {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.3);
+  text-align: center;
+  width: 300px;
+}
+
+.join-form h1 {
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.join-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.join-form button {
+  background-color: #4cafef;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.join-form button:hover {
+  background-color: #1e90ff;
+}
+
+/* Main Editor Layout */
+.editor-container {
+  display: flex;
+  height: 100vh;
+  background-color: #1e1e1e;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background: #ffffff;
+  border-right: 1px solid #ddd;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.room-info {
+  margin-bottom: 1rem;
+}
+
+.room-info h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  color: #333;
+}
+
+/* Copy Button */
+.copy-button {
+  background-color: #4cafef;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.15s ease;
+}
+
+.copy-button:hover {
+  background-color: #1e90ff;
+  transform: translateY(-2px);
+}
+
+.copy-button:active {
+  transform: translateY(0);
+}
+
+.copy-button.copied {
+  background-color: #28a745;
+}
+
+/* User List */
+.sidebar h3 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  color: #444;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  padding: 0.5rem 0;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.sidebar ul li:hover {
+  background-color: #f0f2f5;
+}
+
+/* Typing Indicator */
+.typing-indicator {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: auto;
+  margin-bottom: 1rem;
+}
+
+/* Language Selector */
+.language-selector {
+  width: 100%;
+  padding: 0.4rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Leave Button */
+.leave-button {
+  background-color: #ff4d4f;
+  color: white;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.leave-button:hover {
+  background-color: #e04344;
+}
+
+/* Editor Wrapper */
+.editor-wrapper {
+  flex: 1;
+}
+
+.copy-success {
+  color: #4caf50;
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+  opacity: 0;
+  animation: fadeInOut 2s ease forwards;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { opacity: 0; }
+}
