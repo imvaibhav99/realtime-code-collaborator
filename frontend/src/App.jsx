@@ -6,7 +6,7 @@ import { useEffect } from 'react';
 import { use } from 'react';
    
 
-const socket = io('http://localhost:3000'); // Connect to the server
+const socket = io('https://code-lab-euk3.onrender.com'); // Connect to the server
 
 
 const App = () => {
